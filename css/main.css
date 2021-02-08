@@ -1,0 +1,287 @@
+/* 구글 웹 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* common */
+.wrap {
+    font: 14px "Noto Sans KR", sans-serif;
+}
+
+.en {
+    font-family: "Exo 2", sans-serif;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+br.mo {
+    display: none;
+}
+
+header {
+    width: 100%;
+    /* background: red; */
+    background: rgba(0, 0, 0, 0.2);
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    z-index: 100;
+}
+
+header .inner-header {
+    width: 84%;
+    /* background: orange; */
+    margin: 0 auto;
+}
+
+header .inner-header .logo {
+    float: left;
+    width: 200px;
+}
+
+header .inner-header .logo img {
+    width: 100%;
+}
+
+
+header .inner-header .gnb {
+    float: left;
+    margin-left: 80px;
+
+}
+
+header .inner-header .gnb li {
+    float: left;
+    margin-right: 80px;
+
+}
+
+header .inner-header .gnb li a {
+    color: #fff;
+    font-size: 16px;
+    /* background: red; */
+    display: block;
+}
+
+header .inner-header .gnb li a:hover {
+    color: #ff8342;
+}
+
+header .inner-header .tnb {
+    float: right;
+
+}
+
+header .inner-header .tnb li {
+    float: left;
+    margin-right: 25px;
+}
+
+header .inner-header .tnb li a {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+
+/*header .inner-header .tnb li a:hover{
+     color: #ff8342; 
+}*/
+
+header .inner-header .tnb li:last-child a {
+    display: block;
+    width: 105px;
+    line-height: 2;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    margin-top: 34px;
+}
+
+header .inner-header .tnb li:last-child a:hover {
+    background: #fff;
+    color: #ff8342;
+}
+
+
+header .inner-header .tnb li:first-child a i,
+header .inner-header .tnb li:nth-child(2) a i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+header .inner-header .tnb li:last-child a i {
+    margin-left: 5px;
+}
+
+/* section main */
+section.main {
+    /* background: red; */
+    background: url('../img/vis_4.jpg') no-repeat center/cover fixed;
+    height: 100vh;
+    position: relative;
+}
+
+section.main .main-title {
+    /* background: tomato; */
+
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+
+    /* 박스를 화면 정중앙에 배치 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: uprising 1s;
+}
+
+@keyframes uprising {
+    0% {
+        opacity: 0;
+        top: 60%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+
+section.main .main-title h2 {
+    font-size: 55px;
+    margin-top: 20px;
+}
+
+section.main .main-title p {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+section.main .main-title .view {
+    display: block;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    width: 180px;
+    margin: 0 auto;
+    padding: 8px 0;
+    letter-spacing: 1px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+section.main .main-title .view::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    /* display: block; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+section.main .main-title .view:hover::after {
+    width: 100%;
+}
+
+/* section about */
+section.about {
+    background: #fff;
+    padding: 80px 0;
+}
+
+section.about .title {
+    color: #000;
+    text-align: center;
+}
+
+section.about .title h2 {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+section.about .title h2 span {
+    color: #ff8342;
+}
+
+section.about .title p {
+    font-size: 18px;
+    color: #555;
+}
+
+section.about ul {
+    background: #fff;
+    width: 74%;
+    margin: 30px auto;
+    border-bottom: 1px solid #ddd;
+}
+
+section.about ul li {
+    float: left;
+    width: 33.33333333333333333333333333333333333333%;
+}
+
+section.about ul li a .img-box {
+    overflow: hidden;
+}
+
+
+section.about ul li a .img-box img {
+    width: 100%;
+    transition: 0.7s;
+}
+
+section.about ul li a:hover .img-box img {
+    transform: scale(1.2);
+}
+
+section.about ul li a .text {
+    padding: 25px;
+}
+
+section.about ul li a .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section.about ul li a .text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+section.about ul li a .text p.more {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-left: 40px;
+    position: relative;
+}
+
+section.about ul li a .text p.more::before {
+    content: '\f30b';
+    font-family: Font awesome 5 Free;
+    font-size: 15px;
+    line-height: 2;
+
+    width: 30px;
+    height: 30px;
+    background: #ff8342;
+    border-radius: 50%;
+    /* display: block; */
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
